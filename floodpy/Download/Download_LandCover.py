@@ -8,6 +8,9 @@ from rasterio.merge import merge
 def worldcover(aoi: str, savepath: str) -> str:
     """Downloads landcover maps from worldcover project
 
+    TODO: Clipping raster to AOI, Metadata dictionary from LC classes, 
+          Visualize on notebook
+
     Args:
         aoi (str): Path to AOI file to dowload data
         savepath (str): Path to store data
@@ -58,6 +61,3 @@ def worldcover(aoi: str, savepath: str) -> str:
             os.rename(os.path.join(savepath, out_fn), os.path.join(savepath, lc_data))
     return os.path.join(savepath, lc_data)
 
-    #TODO Clipping raster to AOI
-    #TODO Metadata dictionary from LC classes 
-    #TODO Visualize on notebook
